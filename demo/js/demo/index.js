@@ -22,7 +22,8 @@ window.onload = function() {
         initFormatters = require('./formatters'),
         initCellEditors = require('./cellEditors'),
         initDashboard = require('./dashboard'),
-        initEvents = require('./events');
+        initEvents = require('./events'),
+        mySwapperPlugin = require('./mySwapperPlugin');         //kvk
 
     // convert field names containing underscore to camel case by overriding column enum decorator
     Hypergrid.behaviors.JSON.prototype.columnEnumKey = Hypergrid.behaviors.JSON.columnEnumDecorators.toCamelCase;
@@ -38,6 +39,9 @@ window.onload = function() {
         behavior = window.b = grid.behavior,
         dataModel = window.m = behavior.dataModel,
         idx = behavior.columnEnum;
+
+        //kvk
+        grid.installPlugins(window.MySwapperPlugin);
 
 
     console.log('Fields:');  console.dir(behavior.dataModel.schema.map(function(cs) { return cs.name; }));

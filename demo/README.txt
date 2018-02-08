@@ -33,5 +33,16 @@ drag-23-drag-to-hole-strip----needs-to-polish-decorations.html
 
         5. animation and swaps are done
 
+Feb 7. index-core-drag.html
+    NOT FOR PRODUCTION ... this is a proof of concept ... it does not work with all cases
+    it should not work for columns which were hidden before ... this needs obvious work
 
-        
+    in this experiment, the above drag and drop plugin is ported to the "gulp-build"
+    as a require.js module
+
+    To run this file, complete
+    gulp browserify-demo
+    and then land like localhost/... index-core-drag.html
+
+
+         
